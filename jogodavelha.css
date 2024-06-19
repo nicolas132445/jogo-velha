@@ -1,21 +1,24 @@
 #board {
-    border: thin solid red;
-    width: 420px;
-    height: 420px;
-    overflow: hidden;
-  }
-  
-  .casinha {
-    width: 135px;
-    height: 135px;
-    border: thin solid;
-    float: left;
-    text-align:center;
-    line-height: 135px;
-    font-size:80px;
-  }
-  
-  .gray {
-    background: black;
-    color: #ffffff;
-  }
+  border: 2px solid red;     /* Corrige a espessura da borda e a declaração de cor */
+  width: 420px;
+  height: 420px;
+  display: flex;             /* Usa flexbox para alinhar as casinhas */
+  flex-wrap: wrap;           /* Permite que as casinhas quebrem para a próxima linha */
+}
+
+.casinha {
+  width: 33.33%;             /* Define a largura de cada casinha como 33.33% do tabuleiro */
+  height: 33.33%;            /* Define a altura de cada casinha como 33.33% do tabuleiro */
+  border: 1px solid black;   /* Define uma borda de 1px sólida preta ao redor de cada casinha */
+  box-sizing: border-box;    /* Mantém a largura e altura definidas incluindo a borda */
+  display: flex;             /* Usa flexbox para centralizar conteúdo */
+  justify-content: center;   /* Centraliza horizontalmente o conteúdo */
+  align-items: center;       /* Centraliza verticalmente o conteúdo */
+  font-size: 3em;            /* Tamanho da fonte para X ou O */
+  cursor: pointer;           /* Muda o cursor para indicar que as casinhas são clicáveis */
+}
+
+.gray {
+  background-color: #333;    /* Corrige a cor de fundo para um tom de cinza escuro */
+  color: white;              /* Define a cor do texto como branco */
+}
