@@ -1,24 +1,26 @@
-#board {
-  border: 2px solid red;     /* Corrige a espessura da borda e a declaração de cor */
-  width: 420px;
-  height: 420px;
-  display: flex;             /* Usa flexbox para alinhar as casinhas */
-  flex-wrap: wrap;           /* Permite que as casinhas quebrem para a próxima linha */
+#tabuleiro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 418px;
+    /* Ajuste o tamanho conforme necessário */
 }
 
-.casinha {
-  width: 33.33%;             /* Define a largura de cada casinha como 33.33% do tabuleiro */
-  height: 33.33%;            /* Define a altura de cada casinha como 33.33% do tabuleiro */
-  border: 1px solid black;   /* Define uma borda de 1px sólida preta ao redor de cada casinha */
-  box-sizing: border-box;    /* Mantém a largura e altura definidas incluindo a borda */
-  display: flex;             /* Usa flexbox para centralizar conteúdo */
-  justify-content: center;   /* Centraliza horizontalmente o conteúdo */
-  align-items: center;       /* Centraliza verticalmente o conteúdo */
-  font-size: 3em;            /* Tamanho da fonte para X ou O */
-  cursor: pointer;           /* Muda o cursor para indicar que as casinhas são clicáveis */
+.casa {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 39px;
+    text-align: center;
 }
 
-.gray {
-  background-color: #333;    /* Corrige a cor de fundo para um tom de cinza escuro */
-  color: white;              /* Define a cor do texto como branco */
+/* Criando o padrão de cores do tabuleiro */
+.casa.clara {
+    background-color: #f0f0f0;
+    /* Cor clara */
+}
+
+.casa.escura {
+    background-color: #808080;
+    /* Cor escura */
 }
